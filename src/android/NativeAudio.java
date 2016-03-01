@@ -311,7 +311,9 @@ public class NativeAudio extends CordovaPlugin implements AudioManager.OnAudioFo
 
     @Override
     public void onPause(boolean multitasking) {
-        super.onPause(multitasking);
+    	//TODO: Add a parameter to allow background sound.
+    	//Temporal test: Do not pause the sound when the app is in brackground. 
+        /*super.onPause(multitasking);
 
         for (HashMap.Entry<String, NativeAudioAsset> entry : assetMap.entrySet()) {
             NativeAudioAsset asset = entry.getValue();
@@ -319,7 +321,7 @@ public class NativeAudio extends CordovaPlugin implements AudioManager.OnAudioFo
             if (wasPlaying) {
                 resumeList.add(asset);
             }
-        }
+        }*/
     }
 
     @Override
